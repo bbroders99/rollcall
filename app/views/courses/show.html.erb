@@ -16,3 +16,35 @@
 </p>
 
 
+<p>
+<table>
+  <thead>All Meetings:
+    <tr>
+      <th>Held on</th>
+      <th>Course ID</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @meeting.each do |meeting| %>
+    <tr>
+      <td><%= meeting.held_on %></td>
+      <td><%= meeting.course_id %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+
+
+</p>
+
+
+    
+
+
+
