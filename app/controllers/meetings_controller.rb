@@ -6,6 +6,8 @@ class MeetingsController < ApplicationController
 
   def show
     @meeting = Meeting.find_by(:id => params[:id])
+    @course = Course.find_by( :number => @meeting.course_id)  # added line to show course title
+
   end
 
   def new
