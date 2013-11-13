@@ -12,14 +12,13 @@
   <div>
     <!-- The second value will be selected initially -->
     <select name="<%= :course_id %>">
-      <option value=1>Class 1</option> 
-      <option value=2 selected>Class 2</option>
-      <option value=3>Class 3</option>
-    </select>
-   
-   
-  </div>
 
+      <% @courses.each do |course| %>
+        <option value=<%= course.number %>>Class <%= course.number %></option> 
+      <% end %>
+    </select>
+      
+  </div>
 
   <div>
     <%= submit_tag "Create Meeting" %>
